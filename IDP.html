@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link href="https://op1static.oktacdn.com/assets/loginpage/css/okta-login-page.min.d029e518b9b3ca1cd273b982139726f2.css" type="text/css" rel="stylesheet" />
+</head>
+
+<body>
+    <div class="content">
+        <style type="text/css">
+            .noscript-msg {
+                background-color: #fff;
+                border-color: #ddd #ddd #d8d8d8;
+                box-shadow: 0 2px 0 rgba(175, 175, 175, 0.12);
+                text-align: center;
+                width: 398px;
+                min-width: 300px;
+                margin: 200px auto;
+                border-radius: 3px;
+                border-width: 1px;
+                border-style: solid;
+            }
+            
+            .noscript-content {
+                padding: 42px;
+            }
+            
+            .noscript-content h2 {
+                padding-bottom: 20px;
+            }
+            
+            .noscript-content h1 {
+                padding-bottom: 25px;
+            }
+            
+            .noscript-content a {
+                background: transparent;
+                box-shadow: none;
+                display: table-cell;
+                vertical-align: middle;
+                width: 314px;
+                height: 50px;
+                line-height: 36px;
+                color: #fff;
+                background: linear-gradient(#007dc1, #0073b2), #007dc1;
+                border: 1px solid;
+                border-color: #004b75;
+                border-bottom-color: #00456a;
+                box-shadow: rgba(0, 0, 0, 0.15) 0 1px 0, rgba(255, 255, 255, 0.1) 0 1px 0 0 inset;
+                -webkit-border-radius: 3px;
+                border-radius: 3px;
+            }
+            
+            .noscript-content a:hover {
+                background: #007dc1;
+                cursor: hand;
+                text-decoration: none;
+            }
+        </style>
+        <noscript>
+    &lt;div id="noscript-msg" class="noscript-msg"&gt;
+        &lt;div class="noscript-content"&gt;
+            &lt;h2&gt;Javascript is required&lt;/h2&gt;
+            &lt;h1&gt;Javascript is disabled on your browser.&amp;nbspPlease enable Javascript and refresh this page.&lt;/h1&gt;
+            &lt;a href="."&gt;Refresh&lt;/a&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+</noscript>
+        <div id="signin-container">
+            <div data-se="auth-container" id="okta-sign-in" class="auth-container main-container can-remove-beacon">
+                <div class="okta-sign-in-header auth-header"> <img src="https://op1static.oktacdn.com/assets/img/logos/okta-logo.00b28e552573899e15fa6e77278759d5.png" class="auth-org-logo" alt="BeyondID LLC">
+                    <div data-type="beacon-container" class="beacon-container" style="transform: scale(1, 1); text-indent: 1px;">
+                        <div class="js-security-beacon">
+                            <div class="beacon-blank">
+                                <div class="radial-progress-bar">
+                                    <div class="circle left">
+                                    </div>
+                                    <div class="circle right">
+                                    </div>
+                                </div>
+                            </div>
+                            <div aria-live="polite" role="image" class="bg-helper auth-beacon auth-beacon-security undefined-user" data-se="security-beacon">
+                                <span class="accessibility-text"></span>
+                                <div class="okta-sign-in-beacon-border js-auth-beacon-border"> </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="auth-content">
+                    <div class="auth-content-inner">
+                        <div class="primary-auth">
+                            <div class="primary-auth-form o-form o-form-edit-mode">
+                                <div data-se="o-form-content" class="o-form-content o-form-theme clearfix">
+                                    <h2 data-se="o-form-head" class="okta-form-title o-form-head">Sign In</h2>
+                                    <div class="o-form-error-container" data-se="o-form-error-container"></div>
+                                    <div class="o-form-fieldset-container" data-se="o-form-fieldset-container">
+                                        <div data-se="o-form-fieldset" class="o-form-fieldset o-form-label-top">
+                                            <div data-se="o-form-input-container" class="o-form-input">
+                                                <span data-se="o-form-input-username" class="o-form-input-name-username o-form-control okta-form-input-field input-fix">	      	       <span class="input-tooltip icon form-help-16" data-hasqtip="0"></span>
+                                                <span class="icon input-icon person-16-gray">
+                                                    </span>
+                                                <input type="text" placeholder="Username" id="okta-signin-username"> </span>
+                                            </div>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+                                <div class="o-form-button-bar">
+                                    <input class="button button-primary" onclick="abc()" value="Next" type="submit" id="okta-signin-submit" data-type="save"></div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        var substring1 = 'idamta.com';
+        var substring2 = 'beyondid.com';
+        var substring3 = 'okta.com';
+
+        function abc() {
+            var username = document.getElementById("okta-signin-username").value;
+            if (username == " ")
+                alert("All fields are compalsory ");
+            else {
+                if (username.indexOf(substring1) != -1) {
+                    location.href = "https://dev-606605.oktapreview.com/app/okta_org2org/exkeidupl60GRj5Mv0h7/sso/saml ";
+
+                } else if (username.indexOf(substring2) != -1) {
+                    location.href = "https://dev-497565.oktapreview.com/app/beyondidllc_testsaml2_1/exkedr6k5qWebGqzd0h7/sso/saml ";
+                } else if (username.indexOf(substring3) != -1) {
+                    location.href = "https://sasikelam.oktapreview.com/signin ";
+                } else
+                    alert("You are not a authorized user ");
+            }
+        }
+    </script>
+
+</body>
+
+
+</html>
